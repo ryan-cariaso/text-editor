@@ -21,8 +21,6 @@ const input = document.querySelector('input')
 
 function saveCommand(e) {
   commands.push({
-    // the action is also saved for implementing redo, which
-    // is not implemented in this example.
     action: { type: 'add', key: e.key, index: input.selectionStart },
     inverse: { type: 'remove', index: input.selectionStart }
   })
